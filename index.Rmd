@@ -13,74 +13,52 @@ mode        : selfcontained
 
 ## Introduction
 
-Slidify is simply fanatastic? Easy to use and clear!
-As long as you don't forget to include:
+This presentation will provide a brief overview about my Shiny application
+that I created for the Coursera course called Developing Data Products.
 
-<!---Add {R} after the backticks to evaluate the code (with R of course) --->
-```
-library(shiny)
-slidify("test.Rmd")
-```
-
-This code can be found on my GitHub repo: https://github.com/xeggsy/Coursera-DDP
-![GitHub logo](./assets/img/blacktocat.png)
-
---- .class # Special style through CSS
-
-## Related Work
-
-**Big** thanks to Vaidyanathan Ramnath for creating Slidify!
+If you would like to download these slides for future reference, please visit
+my github at https://github.com/xeggsy/Coursera-DDP/tree/slidify 
 
 ---
 
 ## Description
 
-Much to be discussed here:
+My application hosted at ShinyApps.io (https://xeggsy.shinyapps.io/shiny/) 
+allows a user to browse the trees dataset (from the package "datasets") in various 
+interesting ways:
 
-- The what?
-- The why?
-- The how?
-
---- &radio
-
-## A quick question
-
-What is $1 + 1$?
-
-1. 1
-2. _2_
-3. 3
-4. None of the above
-
-*** .hint
-Pick answer 1.
-
-*** .explanation
-Required knowledge: expert math
+* it is possible to view all the different attributes of the data
+* it support various charts for presenting the data
+* it reports on several useful statistics concerning the data
 
 ---
 
-## Results
+## How to DIY?
 
-Inconclusive! 
-> According to the analysis by me!
+After having downladed all the code from my Github repository, simply execute the
+following commands (within an R environment of course!):
 
-  File   | Load speed
--------- | ----------
-test.R   | 40s
+**Slidify**
+```
+library(slidify)
+slidify('index.Rmd')
+browseURL('index.html')
+```
+
+<br>
+
+**Shiny** 
+```
+setwd('<directory_containing_the_files>')
+runApp()
+```
 
 ---
 
-## Conclusion
+## Example Plot
 
-Ideas are waiting to be confirmed.
-
---- &interactive
-
-## Interactive Console
-
-```{r opts.label = 'interactive', results = 'asis'}
-require(googleVis)
-M1 <- gvisMotionChart(Fruits, idvar = 'Fruit', timevar = 'Year')
-print(M1, tag = 'chart')
+```{r, echo = FALSE}
+library(datasets)
+data(trees)
+hist(trees$Height, xlab = 'Height', col = 'lightblue', main = '#Black Cherry trees relative to their height')
 ```

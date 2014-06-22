@@ -52,28 +52,30 @@
     <h2>Introduction</h2>
   </hgroup>
   <article data-timings="">
-    <p>Slidify is simply fanatastic? Easy to use and clear!
-As long as you don&#39;t forget to include:</p>
+    <p>This presentation will provide a brief overview about my Shiny application
+that I created for the Coursera course called Developing Data Products.</p>
 
-<!---Add {R} after the backticks to evaluate the code (with R of course) --->
-
-<pre><code>library(shiny)
-slidify(&quot;test.Rmd&quot;)
-</code></pre>
-
-<p>This code can be found on my GitHub repo: <a href="https://github.com/xeggsy/Coursera-DDP">https://github.com/xeggsy/Coursera-DDP</a>
-<img src="./assets/img/blacktocat.png" alt="GitHub logo"></p>
+<p>If you would like to download these slides for future reference, please visit
+my github at <a href="https://github.com/xeggsy/Coursera-DDP/tree/slidify">https://github.com/xeggsy/Coursera-DDP/tree/slidify</a> </p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="class" id="slide-2" style="background:;">
+<slide class="" id="slide-2" style="background:;">
   <hgroup>
-    <h2>Related Work</h2>
+    <h2>Description</h2>
   </hgroup>
   <article data-timings="">
-    <p><strong>Big</strong> thanks to Vaidyanathan Ramnath for creating Slidify!</p>
+    <p>My application hosted at ShinyApps.io (<a href="https://xeggsy.shinyapps.io/shiny/">https://xeggsy.shinyapps.io/shiny/</a>) 
+allows a user to browse the trees dataset (from the package &quot;datasets&quot;) in various 
+interesting ways:</p>
+
+<ul>
+<li>it is possible to view all the different attributes of the data</li>
+<li>it support various charts for presenting the data</li>
+<li>it reports on several useful statistics concerning the data</li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -81,16 +83,26 @@ slidify(&quot;test.Rmd&quot;)
 
 <slide class="" id="slide-3" style="background:;">
   <hgroup>
-    <h2>Description</h2>
+    <h2>How to DIY?</h2>
   </hgroup>
   <article data-timings="">
-    <p>Much to be discussed here:</p>
+    <p>After having downladed all the code from my Github repository, simply execute the
+following commands (within an R environment of course!):</p>
 
-<ul>
-<li>The what?</li>
-<li>The why?</li>
-<li>The how?</li>
-</ul>
+<p><strong>Slidify</strong></p>
+
+<pre><code>library(slidify)
+slidify(&#39;index.Rmd&#39;)
+browseURL(&#39;index.html&#39;)
+</code></pre>
+
+<p><br></p>
+
+<p><strong>Shiny</strong> </p>
+
+<pre><code>setwd(&#39;&lt;directory_containing_the_files&gt;&#39;)
+runApp()
+</code></pre>
 
   </article>
   <!-- Presenter Notes -->
@@ -98,116 +110,11 @@ slidify(&quot;test.Rmd&quot;)
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>A quick question</h2>
+    <h2>Example Plot</h2>
   </hgroup>
   <article data-timings="">
-    
-<div class="quiz quiz-single well ">
-  <p>What is \(1 + 1\)?</p>
+    <p><img src="assets/fig/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
 
-<ol>
-<li>1</li>
-<li><em>2</em></li>
-<li>3</li>
-<li>None of the above</li>
-</ol>
-
-  <button class="quiz-submit btn btn-primary">Submit</button>
-  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
-  <button class="quiz-show-answer btn btn-success">Show Answer</button>
-  <button class="quiz-clear btn btn-danger">Clear</button>
-  
-  <div class="quiz-hint">
-  <p>Pick answer 1.</p>
-
-</div>
-<div class="quiz-explanation">
-  <p>Required knowledge: expert math</p>
-
-</div>
-</div>
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-5" style="background:;">
-  <hgroup>
-    <h2>Results</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>Inconclusive! </p>
-
-<blockquote>
-<p>According to the analysis by me!</p>
-</blockquote>
-
-<table><thead>
-<tr>
-<th>File</th>
-<th>Load speed</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>test.R</td>
-<td>40s</td>
-</tr>
-</tbody></table>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-6" style="background:;">
-  <hgroup>
-    <h2>Conclusion</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>Ideas are waiting to be confirmed.</p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-7" style="background:;">
-  <hgroup>
-    <h2>Interactive Console</h2>
-  </hgroup>
-  <article data-timings="">
-     
-<div class='row-fluid'>
-  <div class='span5'>
-    <form id="knitForm7" data-cell="7">
-      <p><textarea class='interactive' id='interactive7' data-cell='7' data-results='asis' style='display:none'>require(googleVis)
-M1 &lt;- gvisMotionChart(Fruits, idvar = &#39;Fruit&#39;, timevar = &#39;Year&#39;)
-print(M1, tag = &#39;chart&#39;)</textarea></p>
-
-      <div id='aceeditor7' style="height:px;"></div>
-      <div class='interactive btn-toolbar pull-left'>
-        <div class='btn-group'>
-          <a class='btn btn-small action-button' id='runCode7' data-action='runCode'
-            data-cell='7' rel='tooltip' data-title='Run Code'>
-            <i class='icon-play'></i>
-          </a>
-          <a class='btn btn-small iBtn' id='testCode7' data-action='testCode'
-             data-cell='7' rel='tooltip' data-title='Test Code'>
-            <i class='icon-check'></i>
-          </a>
-          <a class='btn btn-small iBtn' id='clearResult7' data-action='clearResult'
-             data-cell='7' rel='tooltip' data-title='Clear Output'>
-            <i class="icon-remove"></i>
-          </a>
-          <a class='btn  btn-small iBtn' id='getHint7' rel='tooltip' 
-            data-title="Get Hint" data-action='getHint'
-            data-cell='7' data-hint="">
-            <i class="icon-bookmark"></i>
-          </a>
-        </div>
-      </div>    </form>
-  </div>
-  <div class='span7'>
-    <div id="knitResult7" class='shiny-html-output'></div>
-  </div>
-</div>
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -224,38 +131,20 @@ print(M1, tag = &#39;chart&#39;)</textarea></p>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Related Work'>
+        data-slide=2 title='Description'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Description'>
+        data-slide=3 title='How to DIY?'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='A quick question'>
+        data-slide=4 title='Example Plot'>
          4
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Results'>
-         5
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='Conclusion'>
-         6
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='Interactive Console'>
-         7
       </a>
     </li>
   </ul>
